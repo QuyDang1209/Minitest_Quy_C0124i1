@@ -27,8 +27,8 @@
     // Bước 2: tạo 1 nút lệnh có sự kiện là onclick, và dòng h1 có id là Ketqua
     //Bước 3: Tạo câu lệnh để lấy giá trị 2 biến a và b được nhập từ hộp thoại -->
     function click() {
-        var a = +document.getElementById("num1").value
-        var b = +document.getElementById("num2").value
+        let a = +document.getElementById("num1").value
+        let b = +document.getElementById("num2").value
         // Bước 3: Tạo câu lệnh để hiển thị kết quả thông qua dòng h1
         document.getElementById("Ketqua").innerHTML = "S=" +a*b;
     }

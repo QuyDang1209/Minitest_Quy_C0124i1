@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="year" placeholder="Nhập số năm"><br>
+<button type="button" onclick="change()">Try</button>
+<p id="changeyear"></p>
+</body>
+<script>
+    function change() {
+        let a=+document.getElementById("year").value
+        document.getElementById("changeyear").innerHTML ="Thế kỉ này là: " + Math.floor(a/100+1);
+    }
+</script>
+</html>

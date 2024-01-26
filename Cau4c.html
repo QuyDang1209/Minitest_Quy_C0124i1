@@ -5,18 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-<p><input type="text" id="num1">Nhập a</p> <br>
-<p><input type="text" id="num2">Nhập b</p> <br>
-
-<button type="button" onclick="tye()">Click</button>
-<p id="Ketqua"></p>
-
+<input type="text" id="num1">Nhap a <br>
+<input type="text" id="num2">Nhap b <br>
+<button type="button" onclick="chek()">Try</button>
+<h1 id="kq"></h1>
 </body>
 <script>
-    function tye() {
-        let a=+document.getElementById("num1").value
-        let b=+document.getElementById("num2").value
-        document.getElementById("Ketqua").innerHTML = "Kết quả 1:" +a*a +"   " + "Kết quả 2: " + a*b;
+    function chek() {
+        let a= +document.getElementById("num1").value
+        let b= +document.getElementById("num2").value
+        let n= (b-a)+1
+        if (a<b) { if (n%2 === 0) {document.getElementById("kq").innerHTML ="Ketqua: " + (a+b)*n/2}
+        else {document.getElementById("kq").innerHTML ="Ketqua: " + ((a+b)*(Math.floor(n/2))+(a+b)/2)}}
+        else {document.getElementById("kq").innerHTML ="Không phải dãy số: "}
+
+
     }
 </script>
 </html>

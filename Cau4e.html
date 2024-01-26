@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="canha"> Nhập cạnh a <br>
+<input type="text" id="canhb"> Nhập cạnh b <br>
+<input type="text" id="canhc"> Nhập cạnh c <br>
+<button type="button" onclick="check ()">Click here</button>
+<p id="ketqua"></p>
+
+</body>
+<script>
+    function check () {
+        var a=+document.getElementById("canha").value
+        var b=+document.getElementById("canhb").value
+        var c=+document.getElementById("canhc").value
+        d= a*a
+        e= b*b
+        f= c*c
+
+        if (a>0 && b>0 && c>0) {
+                if ((a+b)>c && (a+c)>b && (b+c)>a){
+                    if ((d+e)==f || (d+f)==e || (e+f)==d) {document.getElementById("ketqua").innerHTML="Tam giác vuông"}
+                    else if (a==b && b==c && c==a) {document.getElementById("ketqua").innerHTML="Tam giác đều"}
+                         else if (a==b || a==c || c==b) { document.getElementById("ketqua").innerHTML="Tam giác cân"}
+                              else {document.getElementById("ketqua").innerHTML="Tam giác thường"}
+                }
+                else {document.getElementById("ketqua").innerHTML="Không phải 3 canh tam giác"}
+        }
+        else {document.getElementById("ketqua").innerHTML="Không phải 3 canh tam giác"}
+    }
+</script>
+</html>
