@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><input type="text" id="num1">Nhập a</p> <br>
+<p><input type="text" id="num2">Nhập b</p> <br>
+
+<button type="button" onclick="tye()">Click</button>
+<p id="Ketqua"></p>
+
+</body>
+<script>
+    function tye() {
+        let a=+document.getElementById("num1").value
+        let b=+document.getElementById("num2").value
+        document.getElementById("Ketqua").innerHTML = "Kết quả 1:" +a*a +"   " + "Kết quả 2: " + a*b;
+    }
+</script>
+</html>

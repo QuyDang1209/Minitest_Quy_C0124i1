@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num1">Nhập a <br>
+<input type="number" id="num2">Nhập b <br>
+<button type="button" onclick="click()">Try</button>
+<h1 id="Ketqua"></h1>
+</body>
+<script>
+    // Bài 1: câu lệnh là:
+    //Câu lệnh hiển thị hộp thoại
+    // prompt("Hiển thị hộp thoại")
+    // //Câu lệnh hiển thị tên lên hộp thoại
+    // alert("Đặng Phước Quý")
+    // // Bài 2: câu lệnh là:
+    // //Câu lệnh nhận giá trị của hộp thoại
+    // let a = +prompt("Nhập giá trị")
+    // // Code nhận giá trị từ hộp thoại, hiển thị bình phương số đó ra
+    // let b = +prompt("Nhập giá trị")
+    // alert(b*b)
+    // Bài 3:
+    //Bước 1: tạo thẻ h1 có id="Ketqua"-->
+    // Bước 2: tạo 1 nút lệnh có sự kiện là onclick, và dòng h1 có id là Ketqua
+    //Bước 3: Tạo câu lệnh để lấy giá trị 2 biến a và b được nhập từ hộp thoại -->
+    function click() {
+        var a = +document.getElementById("num1").value
+        var b = +document.getElementById("num2").value
+        // Bước 3: Tạo câu lệnh để hiển thị kết quả thông qua dòng h1
+        document.getElementById("Ketqua").innerHTML = "S=" +a*b;
+    }
+
+</script>
+</html>
